@@ -55,7 +55,7 @@ Several drivers make use of the high frequency crystal oscillator from the board
 
 **Clock config:**
 
-![alt text](high_speed_clock_image.png)
+![high_speed_clock_image](https://github.com/user-attachments/assets/0111e3eb-f7b0-4f27-8fea-57568a40f945)
 Input frequency should be $24MHz$ (freq of the crystal), and it should be selected as shown on the figure above.
 
 ## EXTI wrapper (driver_exti.c/h)
@@ -77,8 +77,7 @@ Drive up to 4 PWM-driven servo motors.
 
 **Required pinout and clock config:**
 
-![alt text](timer_setup.jpg)
-
+![timer_setup](https://github.com/user-attachments/assets/4f571a03-8650-4abf-90c2-69893f6577a7)
 The timers should be set accordingly, they will define the frequency $f_{PWM}$ and duty cycle $d_{c}$. The above figure shows to which busses each timer is linked to, while to which timer and channel each pin is attached to.
 
 We will define for each PIN $i$:
@@ -219,7 +218,7 @@ The WS2812 LED is connected to SPI6, which is connected to the APB4 Peripheral c
 
 **RQ: TEST IF NECESSARY**
 Set under SPI6 Clock Mux, source as HSE. The baud rate of SPI6 should be 12Mbit/s
-![alt text](SPI6_mux.png)
+![SPI6_mux](https://github.com/user-attachments/assets/d36ca13a-fd74-44ea-b66a-53886b7eedf8)
 
 # Driver usage
 
