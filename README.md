@@ -3,17 +3,21 @@
 Some drivers written for [DM-MC02 Board](https://gitee.com/kit-miao/dm-mc02) to encapsulate the board's features.
 
 ## Requirements
+
 This library was made for the STM32CubeIDE environment, and designed for the [DM-MC02 Board](https://gitee.com/kit-miao/dm-mc02) based on [STM32h723vgT6](https://www.st.com/en/microcontrollers-microprocessors/stm32h723vg.html) MCU.
 
 ## Repository content
+
 This repository provides several resources:
 * [`STM32CubeIDE_project`](./STM32CubeIDE_project/) contains an example STM32CubeIDE project
 * [`driver_files`](./driver_files/) contains the driver's source code
+
 A README.md file can be found in each of these folders to provide additionnal information.
 
 Please also refer to [DriverUsage.md](./DriverUsage.md) for more information on how to use the drivers.
 
 ## Features
+
 This repository implement the following librairies:
 * `driver_exti`: A wrapper to handle GPIO external interrupts
 * `driver_servo_pwm`: Drive any PWM-controlled servo motors
@@ -26,6 +30,7 @@ Additionnal instructions are also given to
 * handle FDCAN communication
 
 ## Known issues
+
 * Issue with `ws2812` library causing wrong colors to be displayed. Probably due to timing issues.
 
 ## Contributing
@@ -41,5 +46,6 @@ Not yet decided as this repository shares STM32CubeIDE projects.
 Example code from the DM-MC02's manufacturer [here](https://gitee.com/kit-miao/dm-mc02/tree/master) greatly helped the driver's development.
 
 ## Version history
+
 * `v1.00` Initial release
 * `v1.01` Added speed limit to driver_servo_pwm (single and simultaneous motion) and improved docstring
