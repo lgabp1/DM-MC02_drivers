@@ -42,3 +42,4 @@ Example code from the DM-MC02's manufacturer [here](https://gitee.com/kit-miao/d
 
 ## Version history
 * `v1.00` Initial release
+* `v1.01` Added speed limit to driver_servo_pwm (single and simultaneous motion) and improved docstring

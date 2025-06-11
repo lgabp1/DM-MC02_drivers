@@ -1,7 +1,7 @@
 /*
  * driver_buzzer.c
  *
- *  Created on: Apr 29, 2025
+ *  Created on: Jun 09, 2025
  *      Author: LeoG
  */
 
@@ -9,23 +9,20 @@
 volatile float _BUZZER_INTENSITY = 0.5; // duty cycle in [0.0, 1.0] scale.
 
 /*
- * buzzer_enable()
- * Start buzzer timer
+ * Start the buzzer by starting its related timer timer
  */
 int buzzer_enable() {
 	return (int)HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_2);
 }
 
 /*
- * buzzer_enable()
- * Stop buzzer timer
+ * Stops the buzzer by stopping its related timer
  */
 int buzzer_disable() {
 	return (int)HAL_TIM_PWM_Stop(&htim12, TIM_CHANNEL_2);
 }
 
 /*
- * buzzer_set_frequency()
  * Set buzzer frequency
  */
 int buzzer_set_frequency(float frequency) {
@@ -39,8 +36,7 @@ int buzzer_set_frequency(float frequency) {
 }
 
 /*
- * buzzer_set_frequency()
- * Set buzzer frequency as midi note. Because of the buzzer's limited oscillating frequency range, midi notes under 69 will not be heard.
+ * Set buzzer frequency as midi note.
  */
 int buzzer_set_midi(int midi_note_number) {
 	float midi_note_freq = 440.0 * pow(2.0, (midi_note_number - 69)/(12.0) );

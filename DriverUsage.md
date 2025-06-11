@@ -261,6 +261,22 @@ void USER_GPIO_15_EXTI_CALLBACK()
     servo_PWM_set_angle(servo1, 100);
 ```
 
+Below is an example use of simultaneous drive (assuming servo1, ..., servo4 already defined)
+```c
+  servo_PWM* servos[4] = {&servo1, &servo2, &servo3, &servo4};
+  float angles_deg[4];
+  float max_speeds_degps[4] = {50, 40, 30, 20};
+  while (1) {
+	  angles_deg[0] = -100.0f; angles_deg[1] = -80.0f; angles_deg[2] = -60.0f; angles_deg[3] = -40.0f;
+	  servo_PWM_group_goto_angle(servos, angles_deg, max_speeds_degps, 4);
+	  HAL_Delay(500);
+
+	  angles_deg[0] = 100.0f; angles_deg[1] = 80.0f; angles_deg[2] = 60.0f; angles_deg[3] = 40.0f;
+	  servo_PWM_group_goto_angle(servos, angles_deg, max_speeds_degps, 4);
+	  HAL_Delay(500);
+  }
+```
+
 ## Buzzer usage
 
 **Requirements** : Please be sure to copy the required files in the project folder and set up the pin and clocks accordingly.
