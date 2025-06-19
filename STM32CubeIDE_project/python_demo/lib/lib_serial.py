@@ -69,7 +69,7 @@ class SerialHandler:
             with SerialHandler.locks[self.port]:
                 line = self.serial.readline().decode(encoding)  # Read a line of data and decode it to a string
             if remove_newline:
-                line = line.replace('\n', '').replace('\r', '')  # Remove newline characters from the received data
+                line = line.rstrip('\n\r')  # Remove newline characters at the end of the received data
             return line
         else:
             raise SerialException("Serial port is not open")

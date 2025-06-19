@@ -95,7 +95,7 @@ Thus, the following configurations should be done (*Example values*):
    * Timers/TIM1:
        * Clock Source = Internal Clock
        * Channel3 = PWM Generation CH3
-           * Prescaler = $P_1 - 1$ (*120*2 - 1*)
+           * Prescaler = $P_1 - 1$ (*120×2 - 1*)
            * Counter Period (AutoReload Register, ARR) = $ARR - 1$ (*10000 - 1*)
 - Pin2 (PE09, TIM1_CH1)
    * Take note of nominal PWM period / frequency for the 2nd servo motor: $f_{PWM_2}$ (*20ms ⇔ 50Hz*)
@@ -103,7 +103,7 @@ Thus, the following configurations should be done (*Example values*):
    * Timers/TIM1:
        * Clock Source = Internal Clock
        * Channel1 = PWM Generation CH1
-           * Prescaler = $P_1 - 1$ (*120*2 - 1*)
+           * Prescaler = $P_1 - 1$ (*120×2 - 1*)
            * Counter Period (AutoReload Register, ARR) = $ARR - 1$ (*10000 - 1*)
 - Pin3 (PE02, TIM2_CH3)
    * Take note of nominal PWM period / frequency for the 3rd servo motor: $f_{PWM_3}$ (*20ms ⇔ 50Hz*)
@@ -111,7 +111,7 @@ Thus, the following configurations should be done (*Example values*):
    * Timers/TIM1:
        * Clock Source = Internal Clock
        * Channel2 = PWM Generation CH3
-           * Prescaler = $P_1 - 1$ (*120*2 - 1*)
+           * Prescaler = $P_1 - 1$ (*120×2 - 1*)
            * Counter Period (AutoReload Register, ARR) = $ARR - 1$ (*10000 - 1*)
 - Pin4 (PE00, TIM2_CH1)
    * Take note of nominal PWM period / frequency for the 4th servo motor: $f_{PWM_4}$ (*20ms ⇔ 50Hz*)
@@ -119,7 +119,7 @@ Thus, the following configurations should be done (*Example values*):
    * Timers/TIM1:
        * Clock Source = Internal Clock
        * Channel2 = PWM Generation CH1
-           * Prescaler = $P_1 - 1$ (*120*2 - 1*)
+           * Prescaler = $P_1 - 1$ (*120×2 - 1*)
            * Counter Period (AutoReload Register, ARR) = $ARR - 1$ (*10000 - 1*)
 
 **Notes**
